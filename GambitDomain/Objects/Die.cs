@@ -3,9 +3,9 @@ using GambitDomain.Interfaces;
 
 namespace GambitDomain.Objects
 {
-    public class Die(List<IFacet> facets)
+    public class Die(IEnumerable<IFacet> facets)
     {
-        public List<IFacet> Facets { get; set; } = facets;
+        public IEnumerable<IFacet> Facets { get; set; } = facets;
 
         public IFacet Roll()
         {
