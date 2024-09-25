@@ -2,7 +2,6 @@
 using GambitDomain.Enums;
 using GambitDomain.Objects;
 
-
 namespace GambitDomain.Factories
 {
     public static class FacetFactory
