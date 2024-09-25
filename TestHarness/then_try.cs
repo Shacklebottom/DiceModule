@@ -5,26 +5,26 @@ using GambitDomain.Factories;
 
 Console.WriteLine("turtles begin" + "\n");
 
-
 var facets = new List<IFacet>();
 
-foreach (Numerics facet in Enum.GetValues(typeof(Numerics)))
+for (int i = 0; i < 5; i++)
 {
-    facets.Add(FacetFactory.CreateFacet(facet));   
+    facets.Add(FacetFactory.CreateFacet(Symbols.Moon));
 }
-
-foreach (Symbols facet in Enum.GetValues(typeof(Symbols)))
-{
-    facets.Add(FacetFactory.CreateFacet(facet));
-}
+facets.Add(FacetFactory.CreateFacet(Symbols.Sun));
 
 Die die = new(facets);
-
-
 var result = die.Roll();
 
-Console.WriteLine($"{result.Face}");
+Console.WriteLine($"You rolled the {result.Face}!");
 
-Console.WriteLine("\n" + "end turtles");
+if ((Symbols)result.Face == Symbols.Sun)
+{
+    Console.WriteLine("\n" + "You won! :)");
+}
+else
+{
+    Console.WriteLine("\n" + "You lost! :(");
+}
 
-
+Console.WriteLine("\n" + "turtles end");
