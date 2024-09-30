@@ -5,6 +5,10 @@ namespace GambitDomain.Enums
     {
         Star,
         Moon,
-        Sun
+        Sun,
+        Tower,
+        Orb,
+        Cloud,
+        Spark
     }
 }
