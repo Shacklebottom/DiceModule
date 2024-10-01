@@ -1,6 +1,5 @@
 ﻿using GambitDomain.Extensions;
 using GambitDomain.Interfaces;
-using System.Runtime.CompilerServices;
 
 namespace GambitDomain.Objects
 {
