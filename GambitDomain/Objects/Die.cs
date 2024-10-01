@@ -13,11 +13,5 @@ namespace GambitDomain.Objects
         }
 
         public IFacet Roll() => RollResult;
-
-        public bool Equals(IFacet facet)
-        {
-            if (this == facet) return true;
-            else return false;
-        }
     }
 }
